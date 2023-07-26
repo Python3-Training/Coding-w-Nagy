@@ -8,7 +8,7 @@ The Game of Nsew
 Objective is to see how many "risks"
 (moves into unknown regions) we can
 endure before being "zeroed," or
-running out of credits ('score.')
+scoring less than zero.
 '''
 
 
