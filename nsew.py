@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # Mission: Coding a classic `Nsew`
 # (pronounced NessEwwh   ;-)
+# Nsew is designed to be as easy to understand as possible, yet still be interesting enough to play.
+# Project: https://github.com/Python3-Training/Coding-w-Nagy
 
 '''
 The Game of Nsew
