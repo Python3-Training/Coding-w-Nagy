@@ -14,7 +14,7 @@ scoring less than zero.
 '''
 
 
-debug = False
+debug = True
 from random import randrange
 
 def move(w, pos, board_size):
@@ -58,19 +58,21 @@ def show(board, pos):
 score = 10
 board_size = 8
 board = [[int(randrange(-3,3)) for _ in range(board_size)] for _ in range(board_size)]
-risks = hi = lo = 0
+risks = hi = lo = evil = 0
 for row in board:
     for col in row:
         if col < 0:
             lo += col
             risks += 1
+            evil += 1
         elif col > 0:
             hi += col
             risks += 1
     
 print("Welcome to Nsew!")
 print(__doc__)
-print(f"High: {hi} Low: {lo} Risks: {risks}\n")
+pct = int(100-((board_size * 2/evil)*100))
+print(f"Game is {pct}% evil (Net {lo+hi})\n")
 
 moved = 0
 pos = [int(board_size/2), int(board_size/2)]
@@ -89,7 +91,7 @@ while True:
             debug = True
         show(board, pos)
         if score < 0:
-            print(f"Zeroed in {moved} risks. [{hi}:{lo}]")
+            print(f"Zeroed in {moved} risks. [{pct}% evil (${lo+hi})]")
             break
     else:
         print('Please enter either N,S,E or W')
