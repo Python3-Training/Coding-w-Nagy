@@ -14,7 +14,7 @@ scoring less than zero.
 '''
 
 
-debug = True
+debug = False # False = hide cell values
 from random import randrange
 
 def move(w, pos, board_size):
