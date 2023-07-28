@@ -23,7 +23,7 @@ def print_header(fh):
         color: black;
         background-color: white;
     }
-    .odd, div {
+    .odd {
         color: black;
         background-color: yellow;
     }
