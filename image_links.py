@@ -18,20 +18,8 @@ def print_header(fh):
         padding: 6px;
         border: 2px solid;
         font-size: 22px;
-    }
-    .even, div {
-        color: black;
-        background-color: white;
-    }
-    .odd, div {
         color: black;
         background-color: yellow;
-    }
-    .tiny {
-        width: 20%;
-    }
-    .short {
-        width: 30%;
     }
 </style>
 </header>
@@ -83,9 +71,6 @@ def gen_report(suffix, home = os.getcwd()):
         for ss, file in enumerate(lres, 1):
             mtime = str(datetime.fromtimestamp(results[file])).split(':')[0:-1]
             mtime = mtime[0] + ':' + mtime[1]
-            style = 'odd'
-            if ss % 2 == 0:
-                style = 'even'
             cols = file.split(os.path.sep)
             parent = cols[-2]
             dparent = 'file://'
