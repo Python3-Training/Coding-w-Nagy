@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 # The Random Zookeep
+# Code walk-thru @ https://www.youtube.com/watch?v=Nmg9sYGILb0
 #
 import enum
 
@@ -53,7 +54,7 @@ if not issubclass(Bird, AbsAnimal):
 if issubclass(Bird, Cat):
    raise Exception("Unloved Bird")   
 if issubclass(Cat, Bird):
-   raise Exception("Unloved Bird")   
+   raise Exception("Unloved Cat")   
 
 done = False
 while not done:
